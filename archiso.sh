@@ -12,8 +12,11 @@ timedatectl status
 
 echo "Partitioning..."
 fdisk -l
-mkfs.ext4 /dev/sda
 fdisk /dev/sda
+# set up main partition primary 1 and boot parition primary 2
+
+mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda2
 
 mount /dev/sda1 /mnt
 mkdir /mnt/boot
