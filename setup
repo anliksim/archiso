@@ -1,0 +1,7 @@
+#!/bin/sh
+
+wget https://raw.githubusercontent.com/anliksim/archiso/master/archiso.sh
+wget https://raw.githubusercontent.com/anliksim/archiso/master/archroot.sh
+
+chmod 700 archiso.sh
+chmod 700 archroot.sh
