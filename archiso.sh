@@ -12,13 +12,12 @@ timedatectl status
 
 echo "Partitioning..."
 fdisk -l
+mkfs.ext4 /dev/sda
+fdisk /dev/sda
 
-#fdisk /dev/sda
-#  Create partitions here
-#mkfs.ext4 /dev/sda
 mount /dev/sda1 /mnt
 mkdir /mnt/boot
-mount /dev/sda3 /mnt/boot
+mount /dev/sda2 /mnt/boot
 
 lsblk -f
 
